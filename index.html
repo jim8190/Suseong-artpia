@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수성 아트피아</title> 
+    <!-- 파비콘 -->
+     <link rel="shotcut icon" href="img/logo.png">
+     <!-- swiper css -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!-- 외부 css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js'></script>
+     <!-- 외부 js -->
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+           <div class="header-top">
+            <div class="center">
+                <div class="logo">
+                    <a href="index.html"><img src="img/Asset 2.png" alt="logo"></a>
+                </div>
+            </div>
+            </div>
+            <div class="header-bottom">
+                <div class="center">
+                    <div class="navi-area">
+                        <div class="menu-icon">
+                            <div class="menu-btn">
+                                <a href="#"><img src="img/9042808_menu_icon.svg" alt="menu"></a>
+                            </div>
+                            <div class="logo2">
+                                <a href="index.html">
+                                    <img src="img/Asset 16.png" alt="logo">
+                                </a>
+                            </div>
+                        </div>
+                        <nav>
+                            <ul>
+                                <li><a href="#">공연정보</a></li>
+                                <li><a href="#">전시정보</a></li>
+                                <li><a href="#">예술아카데미</a></li>
+                                <li><a href="#">고객센터</a></li>
+                                <li><a href="#">기관소개</a></li>
+                            </ul>
+                        </nav>
+                        <div class="member">
+                            <ul>
+                                <li><a href="#">LOGIN</a></li>
+                                <li><a href="#">SIGNUP</a></li>
+                                <li><a href="#">
+                                    <span class="search-icon"><img src="img/9035548_search_outline_icon.svg" alt="search"></span>
+                                    <span class="close-icon"><img src="img/4115230_cancel_close_delete_icon.svg" alt="close"></span>
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="s1">
+            <div class="center">
+                <div class="main">
+                    <div class="swiper mainSwiper">                    
+                        <div class="swiper-wrapper">
+                                <!-- 내 슬라이드 개수 만큼 -->
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="img/orchestra-2098877_1920.jpg" alt="오케스트라">
+                                        <p></p>
+                                    </div>
+                                    <div class="txt-box">
+                                            
+                                        <h2>제레홉 & 서울시립교향악단</h2>
+                                        <p>2024. 08. 29.(목) 17:50 대극장</p>
+                                    </div>                                
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="img/masterpiece-4359011_1920.jpg" alt="전시">
+                                        <p></p>
+                                    </div>
+                                    <div class="txt-box">
+                                        
+                                        <h2>반고흐 인 대구 </h2>
+                                        <p>2024. 09. 10 ~ 10. 30</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="img/character-430545_1920.jpg" alt="연극">
+                                        <p></p>
+                                    </div>
+                                    <div class="txt-box">
+                                        <h2>창작연극팩토리 <청춘연가></h2>
+                                        <p>2024. 09. 04.(수) 17:50 대극장</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="img/phantom-4577790_1920.jpg" alt="오페라">
+                                        <p></p>
+                                    </div>
+                                    <div class="txt-box">
+                                        <h2>마지막 오페라의 유령</h2>
+                                        <p>2024. 09. 28.(토) 19:00 대극장</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="img-box">
+                                        <img src="img/birmingham-museums-trust-5EUh-tq31eA-unsplash.jpg" alt="힐링콘서트">
+                                        <p></p>
+                                    </div>
+                                    <div class="txt-box">
+                                        <h2>바르샤바 국립 미술관展</h2>
+                                        <p>2024. 09. 01. ~ 11. 31</p>
+                                    </div>
+                                </a>
+                            </div>  
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>   
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s2">
+            <div class="center">
+                <div class="title">
+                    <h1>공연 & 전시 정보</h1>
+                    <a href="#">더보기<i><img src="img/2931155_add_attach_create_maximize_new_icon.svg" alt="더보기"></i></a>
+                </div>
+                <div class="container">
+                    <!--scrollTrigger의 pin영역-->
+                    <div class="left-con">
+                        <a href="#"> 
+                        <div class="photo main">
+                            <img src="img/adrianna-geo-1rBg5YSi00c-unsplash.jpg" alt="명화">
+                        </div>
+                        <p>프랑스 내셔널 갤러리 모음전 &lt Classical Art Movement: Artists and Artworks &gt </p>  
+                        </a>
+                        <!-- css에서 photo에 hover하면 이미지가 커지는 애니메이션 -->
+                    </div>
+                    <div class="right-con">
+                        <!-- short 클래스는 높이 : 300 -->
+                        <!-- long 클래스는 높이 : 400 -->
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo short">
+                                    <img src="img/section1-1.jpg" alt="로버트 츠베덴">
+                                </div>
+                                <p>로버트 츠베덴 개인전 <HARMORY OF NATURE> </p>
+                            </a>
+                        </div>
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo short">
+                                    <img src="img/section1-2.jpg" alt="버디가이">
+                                </div>
+                                <p>기타리스트 버디가이 단독 공연</p>
+                            </a>
+                        </div>
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo long">
+                                    <img src="img/section1-3.jpg" alt="공연포스터">
+                                </div>
+                                <p>Endless Inspiration / 끝없는 영감 </p>
+                            </a>
+                        </div>
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo short">
+                                    <img src="img/section1-4.jpg" alt="힐링콘서트">
+                                </div>
+                                <p>명곡과 함께하는 힐링콘서트</p>
+                            </a>
+                        </div>
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo long">
+                                    <img src="img/11 betta-7101167_1280.jpg" alt="김서현">
+                                </div>
+                                <p>김서현 개인전<洙魚畵></p>
+                            </a>
+                        </div>
+                        <div class="photo-box">
+                            <div class="photo short">
+                                <img src="img/section1-6.jpg" alt="황요한">
+                            </div>
+                            <p>황요한 클라리넷 독주회</p>
+                        </a>
+                        </div>
+                        <div class="photo-box">
+                            <div class="photo short">
+                                <img src="img/section1-7.jpg" alt="마리오 해릿">
+                            </div>
+                            <p>빛의 거장 마리오 해릿 내한 전시회</p>
+                        </a>
+                        </div>
+                        <div class="photo-box">
+                            <div class="photo short">
+                                <img src="img/section1-8.jpg" alt="햄릿">
+                            </div>
+                            <p>국립극단 연극<햄릿> </p>
+                        </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s3">
+            <div class="center">
+                <div class="title">
+                    <h1>예술 아카데미</h1>
+                </div>
+                <div class="container">
+                    <div class="swiper gallerySlide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo sp3">
+                                        <img src="img/section2-1.jpg" alt="건축의 역사">
+                                    </div>
+                                    <p>[예술이론:오픈특강]이상미 소장의 건축의 역사</p>
+                                </a>                       
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo sp3">
+                                        <img src="img/section2-2.jpg" alt="유화창작">
+                                    </div>
+                                    <p>유화창작(고급)</p>
+                                </a>                       
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo sp3">
+                                        <img src="img/section2-3.jpg" alt="이상훈의 문화공간">
+                                    </div>
+                                    <p>[예술이론:오픈특강]이상훈의 시그니처 문화공간</p>
+                                </a>                       
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo sp3">
+                                        <img src="img/section2-4.jpg" alt="19세기 미술이야기">
+                                    </div>
+                                    <p>미술사 저널링: 19세기 미술이야기</p>
+                                </a>                       
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo sp3">
+                                        <img src="img/section2-5.jpg" alt="박주현">
+                                    </div>
+                                    <p>[무료 공개특강]박주현의 미술역사, 유희와 혁신</p>
+                                </a>                       
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo sp3">
+                                        <img src="img/s3-20.jpg" alt="화요유화">
+                                    </div>
+                                    <p>화요 스케치(오후)</p>
+                                </a>                       
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo sp3">
+                                        <img src="img/birmingham-museums-trust-p00MgXaa6as-unsplash.jpg" alt="영화">
+                                    </div>
+                                    <p>박새롬의 중세 유럽 전시보기</p>
+                                </a>                       
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <div class="photo sp3">
+                                        <img src="img/movie-1.jpg" alt="영화">
+                                    </div>
+                                    <p>[예술이론] 서남준의 세계예술영화 감상회</p>
+                                </a>                       
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar"></div>
+                      </div>
+                </div>
+            </div>
+        </section>
+        <section class="s4">
+            <div class="center">
+                <div class="title">
+                    <h1>수성 SNS</h1>
+                </div>
+                <!-- 선생님이랑 이부분 다름  -->
+                <div class="container">
+                    <div class="photo-box">
+                        <a href="#">
+                            <div class="photo sp4">
+                                <img src="img/hansujin.jpg" alt="한수진">
+                            </div>
+                            <p>바이올리니스트 한수진</p>
+                        </a>
+                    </div>
+                    <div class="photo-box">
+                        <a href="#">
+                            <div class="photo sp4">
+                                <img src="img/s4-2.jpg" alt="로코쿠 아야코">
+                            </div>
+                            <p>손가락 화가, 로코쿠 아야코</p>
+                        </a>
+                    </div>
+                    <div class="photo-box">
+                        <a href="#">
+                            <div class="photo sp4">
+                                <img src="img/s4-3.jpg" alt="김로이">
+                            </div>
+                            <p>가장 주목받는 신예 화가, 김로이</p>
+                        </a>
+                    </div>
+                    <div class="photo-box">
+                        <a href="#">
+                            <div class="photo sp4">
+                                <img src="img/s4-4.jpg" alt="데이빗 킴">
+                            </div>
+                            <p>MZ세대 거리의 음악가, 데이빗 킴</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s5">
+            <div class="center">
+                <div class="title">
+                    <h1>DAILY NEWS</h1>
+                    <a href="#">더보기<i><img src="img/2931155_add_attach_create_maximize_new_icon.svg" alt="더보기"></i></a>
+                </div>
+                <div class="container">
+                    <div class="left-con">
+                        <a href="#">
+                            <div class="photo main">
+                                <img src="img/IE003087781_PHT.jpg" alt="이봉련">
+                            </div>
+                            <p>배우 이봉련이 그리는 공주가 된 '햄릿'… 16ㆍ17일 수성아트피아 대극장</p>
+                        </a>
+                    </div>
+                    <div class="right-con">
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo middle">
+                                    <img src="img/s5-1.jpg" alt="이동재">
+                                </div>
+                                <p>이동재 작가, 반려견 담은 'Good Friends' 작품 전시회</p>
+                            </a>
+                        </div>
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo middle">
+                                    <img src="img/s5-2.jpg" alt="김선욱">
+                                </div>
+                                <p>지휘와 피아노를 넘나드는 김선욱, 2년 만에 독주 무대로 돌아오다</p>
+                            </a>
+                        </div>
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo middle">
+                                    <img src="img/s5-3.jpg" alt="김주원">
+                                </div>
+                                <p>발레리나 김주원, 그녀의 인생 이야기</p>
+                            </a>
+                        </div>
+                        <div class="photo-box">
+                            <a href="#">
+                                <div class="photo middle">
+                                    <img src="img/s5-4.jpg" alt="미술가협회정기전">
+                                </div>
+                                <p>수성아트피아, 수성구미술가협회 정기전 '대구미술의 시선展' 개최</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s6">
+            <div class="center">
+                <div class="title">
+                    <h1>수성 갤러리</h1>
+                </div>
+                <div class="container">
+                    <div class="photo-box">
+                        <a href="#">
+                            <div class="photo exam">
+                                <img src="img/s6-1.jpg" alt="봄의 소리">
+                            </div>
+                            <p>희망 기획전 <봄의 소리></p>
+                        </a>
+                    </div>
+                    <div class="photo-box">
+                        <a href="#">
+                            <div class="photo exam">
+                                <img src="img/s6-2.jpg"첼로 양성원">
+                            </div>
+                            <p>3월 마티네 콘서트 <첼로 양성원></p>
+                        </a>
+                    </div>
+                    <div class="photo-box">
+                        <a href="#">
+                            <div class="photo exam">
+                                <img src="img/s6-3.jpg" alt="손열음 리사이클">
+                            </div>
+                            <p>손열음 & 루세브 듀오 리사이클</p>
+                        </a>
+                    </div>
+                    <div class="photo-box">
+                        <a href="#">
+                            <div class="photo exam">
+                                <img src="img/s6-4.jpg" alt="공간을 거닐다">
+                            </div>
+                            <p>기획전 <공간을 거닐다> 오픈식</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s7">
+            <div class="center">
+                <div class="container">
+                    <div class="logo-icon">
+                        <img src="img/Asset 10.png" alt="footer logo">
+                    </div>
+                    <p>실시간으로 업데이트 되는 수성의 최신소식</p>
+                    <a href="#">팔로우하기 <i><img src="img/2931155_add_attach_create_maximize_new_icon.svg" alt="더보기"></i></a>
+                    </i></a>
+                </div>
+            </div>
+        </section>
+        <footer>       
+            <div class="footer-top">
+                <div class="center">
+                    <div class="info">
+                        <ul>
+                            <li><a href="#">수성아트피아 소개</a></li>
+                            <li><a href="#">고객센터</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">이메일무단수집거부</a></li>
+                            <li><a href="#">찾아오시는 길</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                        </ul>
+                    </div>
+                    <div class="sns">
+                        <ul>
+                            <li><a href="#">
+                                <img src="img/104498_facebook_icon.svg" alt="facebook">
+                            </a></li>
+                            <li><a href="#">
+                                <img src="img/8679433_instagram_fill_icon.svg" alt="instagram">
+                            </a></li>
+                            <li><a href="#">
+                                <img src="img/5305164_play_video_youtube_youtube logo_icon.svg" alt="youtube">
+                            </a></li>
+                            <li><a href="#">
+                                <img src="img/710297_kakao_social_talk_icon.svg" alt="kakaotalk">
+                            </a></li>
+                            <li><a href="#">
+                                <img src="img/11244080_x_twitter_elon musk_twitter new logo_icon.svg" alt="twitter">
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="center">
+                    <div class="footer-logo">
+                        <img src="img/Asset 16.png" alt="footer-logo">
+                    </div>
+                    <address>
+                        대구 수성구 무학로 180 <span>|</span> 사업자 등록번호 : 502-82-20323<br>
+                        TEL : 053-668-1800 <span>|</span> FAX 053-666-3259<BR><br>
+                        Copyright ⓒ 수성아트피아 All Rights Reserved.
+                    </address>
+                    <div class="family">
+                        <a href="#">
+                           <p>패밀리 사이트</p>
+                           <span><img src="img/9034360_triangle_down_icon.svg" alt="down"></span> 
+                        </a>
+                        <div class="sub">
+                            <a href="#">수성구청</a>
+                            <a href="#">수성문화재단</a>
+                            <a href="#">범어도서관</a>
+                            <a href="#">용학도서관</a>
+                            <a href="#">고산도서관</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- 메뉴 아이콘 누르면 접었다 펴졌다 하는 -->
+        <div class="sitemap">
+            <div class="sitemap-in">
+                <a href="#" class="close-btn">
+                    <img src="img/4115230_cancel_close_delete_icon.svg" alt="close">
+                </a>
+                <div class="sitebox">
+                    <div class="memberbox">
+                        <ul>
+                            <li><a href="#">LOGIN</a></li>
+                            <li><a href="#">SIGNUP</a></li>
+                        </ul>
+                    </div>
+                    <div class="menu1">
+                        <ul>
+                            <li>
+                                <a href="#">NEWS</a>
+                                <a href="#">RENTAL INFO</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu2">
+                        <ul>
+                            <li>
+                                <a href="#"><p>PERFORMANCE</p>
+                                    <i>
+                                        <span class="bar1"></span>
+                                        <span class="bar2"></span>
+                                    </i>
+
+                                </a>
+
+                                <ul class="sub">
+                                    <li><a href="#">기획공연</a></li>
+                                    <li><a href="#">공연일정</a></li>
+                                    <li><a href="#">티켓예매</a></li>
+                                </ul>
+                            </li><!--공연-->
+                            <li>
+                                <a href="#"><p>EXHIBITION</p>
+                                    <i>
+                                        <span class="bar1"></span>
+                                        <span class="bar2"></span>
+                                    </i>
+                                </a>
+                                    
+                                <ul class="sub">
+                                    <li><a href="#">기획전시</a></li>
+                                    <li><a href="#">전시일정</a></li>
+                                    <li><a href="#">미술작품대여제</a></li>
+                                </ul>
+                            </li><!--전시-->
+                            <li>
+                                <a href="#"><p>ACADEMY</p>
+                                    <i>
+                                        <span class="bar1"></span>
+                                        <span class="bar2"></span>
+                                    </i>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="#">수강신청</a></li>
+                                    <li><a href="#">E-book</a></li>
+                                    <li><a href="#">나의강좌</a></li>
+                                </ul>
+                            </li><!--아카데미-->
+                            <li>
+                                <a href="#"><p>COMMUNITY</p>
+                                    <i>
+                                        <span class="bar1"></span>
+                                        <span class="bar2"></span>
+                                    </i>
+                                </a>
+                                <ul class="sub">
+                                    <li><a href="#">회원제도</a></li>
+                                    <li><a href="#">1:1고객센터</a></li>
+                                </ul>
+                            </li><!--커뮤니티-->
+                            <li>
+                            <a href="#"><p>INSTITUTION</p>
+                                <i>
+                                    <span class="bar1"></span>
+                                    <span class="bar2"></span>
+                                </i>
+                            </a>
+                                <ul class="sub">
+                                    <li><a href="#">아트피아소개</a></li>
+                                    <li><a href="#">상주예술단체</a></li>
+                                    <li><a href="#">시설소개</a></li>
+                                    <li><a href="#">오시는 길</a></li>
+                                </ul>
+                            </li><!--시설안내-->
+                        </ul>
+                    </div><!--menu2-->   
+                    <div class="sns">
+                        <ul>
+                            <li><a href="#">
+                                <img src="img/104498_facebook_icon.svg" alt="facebook">
+                            </a></li>
+                            <li><a href="#">
+                                <img src="img/8679433_instagram_fill_icon.svg" alt="instagram">
+                            </a></li>
+                            <li><a href="#">
+                                <img src="img/5305164_play_video_youtube_youtube logo_icon.svg" alt="youtube">
+                            </a></li>
+                            <li><a href="#">
+                                <img src="img/710297_kakao_social_talk_icon.svg" alt="kakaotalk">
+                            </a></li>
+                            <li><a href="#">
+                                <img src="img/11244080_x_twitter_elon musk_twitter new logo_icon.svg" alt="twitter">
+                            </a></li>
+                        </ul>
+                    </div> 
+                </div>
+            </div><!--sitemap-in-->
+            <div class="sitemap-bg"></div>
+        </div><!--sitemap--> 
+        
+        <div class="search-area">
+            <div class="search-bg"></div>
+            <div class="search-in">
+                <div class="input-area">
+                    <input type="search" name="search" placeholder="검색어를 입력해 주세요">
+                    <button type="button">
+                        <img src="img/9035548_search_outline_icon.svg" alt="검색">
+                    </button>
+                </div>
+            </div>  
+        </div>   
+    </div><!--wrap-->
+    <div class="top">
+        <a href="#">TOP</a>
+    </div>
+</body>
+</html>

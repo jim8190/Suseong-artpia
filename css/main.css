@@ -1,0 +1,780 @@
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+* {margin: 0; padding: 0; box-sizing: border-box;}
+li {list-style: none;}
+/* a 태그에 폰트 넣기, a 태그는 body의 상속을 못받기때문에 따로 넣어줘야 함 */
+a {text-decoration: none; color: #111; display: block; font-family: 'SUIT-Regular';}
+img {object-fit: cover;
+    width: 100%;
+    height: 100%;}
+body{font-family: 'SUIT-Regular';}
+html, body {overflow-x: hidden;}
+.wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+.center {
+    width: 1200px;
+    margin: 0 auto;
+}
+header {
+    width: 100%;
+    height: 190px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0 20px;
+    z-index: 100;
+    background-color: white;
+    transition: top 0.5s;
+    position: fixed;
+    top: 0;
+}
+header .logo {
+    width: 250px;
+    margin: 15px auto 0;
+}
+header .navi-area {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+}
+header .navi-area .menu-icon {
+    display: flex;
+    align-items: center;
+    /* width: 28px; */
+}
+header .navi-area .menu-btn {
+    width: 28px;
+    margin-right: 20px;
+}
+header .navi-area .logo2 {
+    width: 150px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+header .navi-area nav {
+    /* 이렇게 하면 가로폭과 상관없이 브라우저 가운데 정렬됨 */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header .navi-area nav ul {
+    display: flex;
+}
+header .navi-area nav ul li {
+    margin: 0 20px;
+}
+header .navi-area nav ul li a {
+    font-size: 18px;
+    letter-spacing: -0.5px;
+    font-weight: 500;
+}
+header .navi-area nav ul li a:hover {
+    color: #353085;
+}
+/* header .navi-area .member img{
+    width: 22px; 
+} */
+header .navi-area .member ul {
+    display: flex; 
+    align-items: center;
+}
+header .navi-area .member ul li {
+    margin-left: 20px;
+}
+header .navi-area .member ul li a {
+    font-size: 14px;
+    font-weight: 300; 
+    
+}
+header .navi-area .member ul li:last-child {
+    top: -14px;
+    width: 28px;
+    position: relative;
+}
+header .navi-area .member ul li:last-child span {
+    position: absolute;
+    display: block;
+}
+header .navi-area .member ul li:last-child .search-icon {
+    display: block;
+}
+header .navi-area .member ul li:last-child .close-icon {
+    display: none;
+}
+header.sticky {
+    /* 헤더에서 190-110=80부분만 보여줌 */
+    top:-110px;
+}
+header.sticky .navi-area .logo2 {
+    opacity: 1;
+}
+.sitemap {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%; /* 주석 해제 */
+    height: 100%; /* 주석 해제 */
+    z-index: 1000;
+}
+.sitemap .sitemap-bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(100% - 480px); /* 메뉴가 차지하는 부분 제외 */
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1001;
+}
+.sitemap .sitemap-in {
+    width: 480px;
+    height: 100%;
+    position: relative;
+    background-color: white;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding : 20px 0px 0px 20px
+}
+.sitemap .sitemap-in .close-btn {
+    width: 30px;
+}
+.sitemap .sitemap-in .sitebox {
+    width: 82%;
+    height: calc(100% - 30px);
+    margin-top: 20px;
+    overflow: auto;
+    float: right;
+    padding-right: 20%;
+}
+.sitemap .sitemap-in .sitebox .memberbox ul {
+    display: flex;
+    margin: 30px 0;
+}
+.sitemap .sitemap-in .sitebox .memberbox ul li {
+    margin-right: 20px;
+}
+.sitemap .sitemap-in .sitebox .memberbox ul li a {
+    font-size: 18px;
+    font-weight: 500;
+    
+}
+.sitemap .sitemap-in .sitebox .menu1 {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 50px;
+}
+.sitemap .sitemap-in .sitebox .menu2 ul{
+    display: flex;
+    flex-flow: column nowrap;
+}
+.sitemap .sitemap-in .sitebox .menu1 ul li a {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    
+}
+.sitemap .sitemap-in .sitebox .menu2 ul li a {
+    font-size: 22px;
+    font-weight: 450;
+    margin: 10px 0;
+    
+}
+.sitemap .sitemap-in .sitebox .menu2 > ul > li > a {
+    font-size: 27px;
+    font-weight: 700;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.sitemap .sitemap-in .sitebox .menu2 > ul > li > a i {
+    top: 7px;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    display: block;
+    text-align: center;
+}
+.sitemap .sitemap-in .sitebox .menu2 > ul > li > a i span {
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background-color: #aaa;
+}
+.sitemap .sitemap-in .sitebox .menu2 > ul > li > a i span.bar1{
+    transform: rotate(90deg);
+}
+.sitemap .sitemap-in .sitebox .menu2 > ul > li > a i span.bar2{
+    display: none;
+}
+.sitemap .sitemap-in .sitebox .sns ul {
+    display: flex;
+    flex-flow: row wrap ;
+    margin: 80px 0;
+}
+.sitemap .sitemap-in .sitebox .sns ul li {
+    width: 45px;
+    height: 45px;
+    margin-right: 24px;
+    margin-bottom: 20px;
+    background-color: #eee;
+    border: 1px solid #eee;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* .sitemap 영역의 .sitebox 스크롤바 수정하기 */
+.sitemap .sitemap-in .sitebox::-webkit-scrollbar {
+    position: relative;
+    left: -5px;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+}
+.sitemap .sitemap-in .sitebox .sns ul li a {
+    width: 25px;  
+    height: 30px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+.sitemap .sitemap-in .sitebox .sns ul li:last-child a {
+    width: 20px;  
+    height: 20px; /* 아이콘의 높이도 설정 */
+}
+.sitemap .sitemap-in .sitebox::-webkit-scrollbar-thumb {
+    background-color: #353085;
+    border-radius: 2px;
+}
+.sitemap .sitemap-in .sitebox::-webkit-scrollbar-track {
+    background-color: #dbdbdb;
+}
+
+
+/* 검색영역 */
+.search-area {
+    display: none;
+    position: fixed;
+    left: 0;
+    /* 이건 본인 헤더 높이에 맞춰서 하기 */
+    top: 190px;
+    z-index: 200;
+    width: 100%;
+    height: calc(100% - 190px);
+}
+.search-area.sticky {
+    top: 80px;
+    height: calc(100% - 80px);
+}
+.search-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;    
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.search-area .search-in {
+    position: absolute;
+    border-top: 1px solid #ddd; 
+    width: 100%;
+    height: 220px;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background-color: #fff;
+}
+.search-area .search-in .input-area {
+    width: 790px;
+    height: 60px;
+    padding: 0px 20px; 
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-area .search-in .input-area input {
+    border: none;
+    padding: 5px;
+    width: 96%;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+}
+/* input[type=search]입력란의 x버튼 커스텀 */
+.search-area .search-in .input-area input[type=search]::-webkit-search-cancel-button {
+    /* 원본숨김 */
+    -webkit-appearance: none;
+    width: 26px;
+    height: 26px;
+    background: url(../img/4115230_cancel_close_delete_icon.svg) center center no-repeat;
+    cursor:pointer;
+}
+/* 입력란을 클릭했을때 테두리 없음 */
+.search-area .search-in .input-area input:focus {
+    outline: none;
+}
+.search-area .search-in .input-area button {
+    cursor: pointer;
+    width: 26px;
+    border: none;
+    background-color: transparent;
+    margin-left: 10px;
+}
+/* 메인슬라이드(swiper) */
+.s1 .main {
+    margin-top: 190px;
+}
+.s1 .main .swiper {
+    width: 100%;
+}
+.s1 .main .swiper .swiper-slide {
+    width: 100%;
+    height: 700px;
+    position:relative;
+}
+.s1 .main .swiper .swiper-slide div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.s1 .main .swiper .swiper-slide .img-box {
+    transform: scale(1, 1);
+    transition: all 5s;
+}
+.s1 .main .swiper .swiper-slide-active .img-box {
+    transform: scale(1.05, 1.05);
+  
+}
+.s1 .main .swiper .swiper-slide div img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.s1 .main .swiper .swiper-slide .txt-box {
+    height: auto;
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+    bottom: 60px; left:0;
+}
+.s1 .main .swiper .swiper-slide .txt-box h2 {
+    font-size: 40px;
+    opacity: 0;
+    transition: all 1s ;
+    transition-delay: 0.5s;
+}
+.s1 .main .swiper .swiper-slide .txt-box p {
+    margin-top: 10px;
+    font-size: 16px;
+    opacity: 0;
+    transition: all 1s;
+    transition-delay: 1s;
+}
+.s1 .main .swiper .swiper-slide-active .txt-box h2 {
+    font-size: 40px;
+    opacity: 1;
+}
+.s1 .main .swiper .swiper-slide-active .txt-box p {
+    opacity: 1;
+}
+
+/* 슬라이드 버튼 */
+.s1 .main .swiper .swiper-button-next:after {
+    content: "";
+    width: 40px;
+    height: 60px;
+    background: url(../img/right\ arrow_icon.svg) center center no-repeat;
+    background-size: cover;
+}
+.s1 .main .swiper .swiper-button-next {
+    margin-right:30px ;
+    width: 50px;
+    opacity: 0.3;
+}
+.s1 .main .swiper .swiper-button-prev:after {
+    content: "";
+    width: 40px;
+    height: 60px;
+    background: url(../img/left\ arrow.svg) center center no-repeat;
+    background-size: cover;
+}
+.s1 .main .swiper .swiper-button-prev {
+    margin-left:30px ;
+    width: 50px;
+    opacity: 0.3;
+}
+
+.s1 .main .swiper .swiper-pagination {
+    bottom: 20px;
+}
+.s1 .main .swiper .swiper-pagination-bullets .swiper-pagination-bullet {
+    position: relative;
+    width: 40px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: white;
+}
+.s1 .main .swiper .swiper-pagination-bullets .swiper-pagination-bullet i {
+    position: absolute;
+    left:0; top:0;
+    width: 100%; height: 100%;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.s1 .main .swiper .swiper-pagination-bullets .swiper-pagination-bullet b {
+    position: absolute;
+    left:0; top:0;
+    width: 0; height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+}
+.s1 .main .swiper .swiper-pagination-bullets .swiper-pagination-bullet-active {
+    background-color: transparent;
+}
+.s1 .main .swiper .swiper-pagination-bullets 
+.swiper-pagination-bullet-active b {
+    width:100%;
+    animation-name: countingBar;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+@keyframes countingBar {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+}
+
+/* 두번째 section - 공연 & 전시 정보 */
+.s2 {
+    margin-top: 100px;
+}
+/* 모든 제목 */
+.title {
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px solid #666;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-bottom: 40px; */
+}
+.title h1 {
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: -2px;
+}
+.title a {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+.title a i img {
+    height: 13px;
+    width: 13px;
+    margin-left: 5px;
+}
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+/* 직속 자식 선택자 */
+.container > div {
+    width: 588px;
+    padding-top: 36px ;
+}
+.container .left-con {
+    height: 884px;
+    font-size: 18px;
+}
+.container .left-con .main {
+    width: 100%;
+    height: 780px;
+    margin-bottom: 10px;
+}
+.container .right-con {
+    height: 1820px;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: space-between;
+
+}
+.container .right-con .photo-box {
+    margin-bottom: 70px;
+    font-size: 18px;
+}
+.container .right-con .photo {
+    width: 282px;
+    margin-bottom: 10px;
+}
+.container .right-con .short {
+    height: 300px;
+}
+.container .right-con .long {
+    height: 400px;
+}
+/* 모든 사진은 마우스 오버했을때 사진이 커지고 마우스 아웃하면 원래 크기로 돌아감 */
+.container .photo {
+    overflow: hidden;
+}
+.container .photo img {   
+    scale: 1;
+    transition: scale 0.5s;
+}
+.container .photo:hover img {
+    scale: 1.1; 
+}
+/* section 3 */
+.s3 {
+    background-color: #f5f6f8;
+    margin-top: 100px;
+    padding: 80px 0 140px;
+}
+.container .swiper {
+    width: 100%;
+    overflow: visible;
+}
+.container .swiper .swiper-slide {
+    width: 384px;
+}
+.container .swiper .swiper-slide p {
+    width: 384px;
+    font-size: 18px;
+    margin-top: 7px;
+}
+.container .swiper .swiper-scrollbar {
+    bottom: -60px;
+    color: #111;
+    height: 2px;
+
+}
+.container .swiper .swiper-slide .sp3 {
+    width: 384px;
+    height: 255.89px;
+}
+
+/* Section 4 */
+.s4 {
+    margin-top: 190px;
+}
+.s4 .container .photo-box p {
+    font-size: 18px;
+    font-weight: 500;
+}
+.s4 .container .sp4 {
+    width: 285px;
+    height: 400px;
+    margin-right: 20px;
+    overflow: hidden;
+    margin-bottom: 7px;
+}
+.s5 {
+    margin-top: 190px;
+}
+.s5 .container .right-con {
+    flex-flow: column nowrap;
+}
+.s5 .container .photo-box .middle {
+    width: 100%;
+    height: 368px;
+}
+
+
+/* section 6 */
+.s6 {
+    margin-top: 190px;
+}
+.s6 .photo-box {
+    width: 282px;
+}
+.s6 .photo-box p {
+    margin-top: 7px;
+    font-size: 18px;
+}
+
+/* section 7 */
+.s7 {
+    margin-top: 190px;
+}
+.s7 .container {
+    width: 100%;
+    height: 140px;
+    background-color: #fafafa;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;
+}
+.s7 .container .logo-icon {
+    width: 120px;
+    margin-top: 10px;
+
+}
+.s7 .container p {
+    font-size: 18px;
+}
+.s7 .container a {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #fff;
+    width: 130px;
+    height: 50px;
+    padding-left: 20px;
+
+}
+.s7 .container a i {
+    height: 20px;
+    margin-left: 5px;
+}
+.s7 .container a i img {
+    width: 15px;
+    height: 15px;
+}
+footer {
+    width: 100%;
+    margin-top: 160px;
+
+}
+footer .footer-top {
+    width: 100%;
+    height: 65px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+footer div .center {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+footer .footer-top div ul {
+    display: flex;
+    flex-flow: row nowrap;
+}
+footer .footer-top div ul li a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #777;
+}
+footer .footer-top .info ul li {
+    margin-right: 40px;
+}
+footer .footer-top .info ul li:nth-child(6) a {
+    color: #111;
+}
+footer .footer-top .sns {
+    width: 250px;
+}
+footer .footer-top .sns ul li {
+    margin-left: 20px;
+    width: 26px;
+}
+footer .footer-top .sns ul li:last-child {
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+}
+footer .footer-top .sns ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer-bottom {
+    height: 200px;
+}
+footer .footer-bottom .footer-logo{
+    width: 160px;
+}
+footer .footer-bottom address{
+    font-size: 15px;
+    color: #666;
+    line-height: 27px;
+    font-style: normal;
+}
+footer .footer-bottom address span {
+    font-size: 13px;
+    color: #dcdcdc;
+    margin: 0 4px;
+}
+footer .footer-bottom .family {
+    width: 180px;
+    /* height: 42px; */
+    position: relative;
+    z-index: 300;
+}
+footer .footer-bottom .family > a {
+    font-size: 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid #aaa;
+    padding: 10px 15px;
+    position: relative;
+    z-index: 301;
+}
+footer .footer-bottom .family > a span {
+    width: 18px;
+    height: 18px;
+
+}
+footer .footer-bottom .family .sub {
+    position: absolute;
+    bottom: 40px;
+    overflow: hidden;
+    width: 100%;
+    z-index: 300;
+    display: none;
+}
+footer .footer-bottom .family .sub a {
+    font-size: 14px;
+    padding: 12px;
+    border: 1px solid #999;
+    border-bottom: none;
+    background-color: #fff;
+}
+footer .footer-bottom .family .sub a:hover {
+    background-color: #f7f7f7
+}
+.top {
+    width: 50px;
+    height: 50px;
+    background-color: #111;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 400;
+    border-radius: 6px;
+}
+.top a {
+    color: white;
+    font-size: 14px;
+}
